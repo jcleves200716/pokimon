@@ -1,13 +1,21 @@
 
 function Loguear() {
-    let username = document.getElementById('username').value
-    let password = document.getElementById('clave').value
+    let correo = document.getElementById('correo').value;
+    let clave = document.getElementById('clave').value;
 
-    if(username == 'lovex14' && password == '123456'){
-        alert('Usuario valido')
-    }else{
-        alert('usuario incorrecto')
-    }  
+    const registroCorreo = localStorage.getItem('registroCorreo');
+    const registroContra = localStorage.getItem('registroContra');
 
+    if (!correo || !clave) {
+        alert('Por favor complete todos los campos');
+        return;
+    }
+
+    if (correo === registroCorreo && clave === registroContra) {
+        alert('Usuario válido');
+        location.href = '../vistas/inicio.html';
+    } else {
+        alert('Usuario o contraseña incorrectos');
+    }
 }
 
