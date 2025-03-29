@@ -2,19 +2,25 @@
 function register(){
     let correo = document.getElementById('correo').value
     let contraseña = document.getElementById ('contra').value
-    let confimarContraseña = document.getElementById('confi-contra')
+    let confiContra = document.getElementById('confiContra').value
 
 let arreglo = [
     correo,
     contraseña,
-    confimarContraseña,
+    confiContra,
 ]
 console.log( arreglo );
 
-    
-    if(contraseña == confimarContraseña){
+    if (!correo || !contraseña || !confiContra) {
+        alert('Por favor complete todos los campos');
+        return;
+    }
+    if(contraseña == confiContra){
         alert('se a registrado con exito');
-        location =''
+        location.href ='../vistas/login.html'
+
+        localStorage.setItem('registro-correo', correo)
+        localStorage.setItem('registro-contra', contra)
     } else{
         alert('las contraseñas no coincicen')
     }
