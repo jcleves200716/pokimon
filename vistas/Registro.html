@@ -1,36 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>POKIMON</title>
-        <script src="../js/registro.js"></script>
-    </head>
-    <body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro POKIMON</title>
+    <script src="../js/registro.js"></script>
+    <hr>
+</head>
 <body>
-    <body>
-        <center>
-            <h1>BIENVENIDO AL MUNDO POKIMON</h1>
-            <p>Bienvenido a mi primer juego en javascript</p>
-        </center>
-        <hr>
+    <center>
+        <h1>Formulario de registro</h1>
+
+        <input type="email" name="correo" id="correo"  placeholder="Correo" required>
         <br>
+        <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
         <br>
-        <center>
- 
-            <h1>Formulario de registro</h1>
-            
-            <label for="">correo</label>
-            <input type="text" name="correo" id="correo">
-                <br>
-            <label for="">contraseña</label>
-            <input type="password" name="contraseña" id="contraseña">
-                <br>
-            <label for="">confirma contraseña</label>
-            <input type="password" name="confiContra" id="confiContra">
-                <br>
-            <button onclick="register()">registrate</button>
-            <br>
+        <input type="password" name="confiContra" id="confiContra" placeholder="Confirma contraseña" required>
+        <br>
+        <input type="text" name="usuario" id="usuario" placeholder="Nombre Usuario" required>
+        <br>
+        <input type="number" name="edad" id="edad" min="1" max="120" placeholder="edad" required>
+        <br>
+        <input type="text" name="nomPokimon" id="nomPokimon" placeholder="Ingresa el nombre de tu Pokimon" required>
+        <br>
+        <button onclick="register()">Regístrate</button>
     </center>
 </body>
 </html>

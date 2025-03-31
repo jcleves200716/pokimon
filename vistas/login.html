@@ -1,30 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>POKIMON</title>
-        <script src="../js/index.js"></script>
-    </head>
-    <body>
-        <center>
-            <h1>BIENVENIDO AL MUNDO POKIMON</h1>
-            <p id="texto">Bienvenido a mi primer juego en javascript</p>
-        </center>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login POKIMON</title>
+    <script src="../js/index.js"></script>
+</head>
+<body>
+    <center>
+        <h1>BIENVENIDO AL MUNDO POKIMON</h1>
+        <p>Bienvenido a mi primer juego en javascript</p>
         <hr>
+        <input type="email" id="correo" placeholder="Corre" required>
         <br>
+        <input type="password" id="contraseña" placeholder="Contraseña" required>
         <br>
+        <button onclick="Loguear()">Iniciar sesión</button>
         <br>
-        <center>
-            <label for="">correo</label>
-            <input type="text" name="" id="correo">
-            <br>
-            <label for="">contraseña</label>
-            <input type="password" name="" id="clave">
-            <br>
-            <button onclick="Loguear()">Inciar sesion</button>
-            <br>
-            <a href="../vistas/Registro.html">registro</a>
-        </center>
-    </body>
+        <a href="../vistas/Registro.html">Regístrate</a>
+    </center>
+</body>
 </html>

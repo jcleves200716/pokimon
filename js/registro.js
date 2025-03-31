@@ -1,10 +1,13 @@
 function register() {
-    let correo = document.getElementById ('correo').value;
-    let contraseña = document.getElementById ('contraseña').value;
-    let confiContra = document.getElementById ('confiContra').value;
-    
-    if (!correo || !contraseña || !confiContra) {
-        alert('Por favor complete todos los campos');
+    const correo = document.getElementById('correo').value;
+    const contraseña = document.getElementById('contraseña').value;
+    const confiContra = document.getElementById('confiContra').value;
+    const usuario = document.getElementById('usuario').value;
+    const edad = document.getElementById('edad').value;
+    const nomPokimon = document.getElementById('nomPokimon').value;
+
+    if (!correo || !contraseña || !confiContra || !usuario || !edad || !nomPokimon) {
+        alert('Por favor llene los campos');
         return;
     }
 
@@ -15,7 +18,10 @@ function register() {
 
     localStorage.setItem('registroCorreo', correo);
     localStorage.setItem('registroContra', contraseña);
-    
-    alert('Se ha registrado con éxito');
+    localStorage.setItem('registroUsuario', usuario);
+    localStorage.setItem('registroEdad', edad);
+    localStorage.setItem('registroPokimon', nomPokimon);
+
+    alert('Registro exitoso!');
     location.href = '../vistas/login.html';
 }
