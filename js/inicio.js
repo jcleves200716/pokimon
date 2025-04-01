@@ -14,7 +14,7 @@ function DatosHistoria() {
         <p>Con ${edad} años, estás listo para comenzar tu aventura con tu Pokimon ${nomPokimon}.</p>
         
         <h4>La Leyenda de los Entrenadores Rivales</h4>
-        <p>En el mundo de Pokimon, hay dos entrenadores rivales, ${usuario}  y Ben, que han estado entrenando a sus pokimons durante años. Ambos buscan convertirse en el Campeón de Pokimon, pero solo uno puede lograrlo.</p>
+        <p>En el mundo de Pokimon, hay dos entrenadores rivales, ${usuario}  y Isabela, que han estado entrenando a sus pokimons durante años. Ambos buscan convertirse en el Campeón de Pokimon, pero solo uno puede lograrlo.</p>
         
         <h4>Los Pokimons Legendarios</h4>
         <p>La leyenda habla de cinco pokimons legendarios:</p>
@@ -35,6 +35,10 @@ function DatosHistoria() {
   
   // Mostrar la sección de resultados
   document.getElementById('result').style.display = 'block';
+
+
+
+  
 }
 
 // Ejecutar automáticamente al cargar la página

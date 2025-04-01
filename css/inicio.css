@@ -1,0 +1,22 @@
+.info-box {
+    display: flex;
+    border: 2px solid #4CAF50; /* Borde verde */
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra */
+}
+
+.info-box h3 {
+    color: #2E7D32; /* Verde oscuro */
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.info-box p {
+    margin: 8px 0;
+    font-size: 16px;
+}
