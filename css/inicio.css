@@ -4,14 +4,14 @@
     font-style: normal;
   }
 .info-box {
-    float: left;
+    float: center;
     display: flex;
-    border: 2px solid #4CAF50; /* Borde verde */
+    border: 2px solid hsl(209, 70%, 48%); /* Borde verde */
     border-radius: 10px; /* Esquinas redondeadas */
     padding: 15px;
     margin: 20px auto;
     max-width: 600px;
-    background-color: #f8f8f8;
+    background-color: #000a9a;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra */
 }
 
