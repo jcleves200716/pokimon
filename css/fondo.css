@@ -7,7 +7,6 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    font-family: Arial, sans-serif;
     color: #f4f4f4;
 }
 
@@ -16,7 +15,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #000a9a;
     color: aliceblue;
     border: #f4f4f4;
 }
