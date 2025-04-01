@@ -1,10 +1,16 @@
+.lilita-one-regular {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 .info-box {
+    float: left;
     display: flex;
     border: 2px solid #4CAF50; /* Borde verde */
     border-radius: 10px; /* Esquinas redondeadas */
     padding: 15px;
     margin: 20px auto;
-    max-width: 500px;
+    max-width: 600px;
     background-color: #f8f8f8;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra */
 }

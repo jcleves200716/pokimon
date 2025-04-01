@@ -24,4 +24,4 @@ function register() {
 
     alert('Registro exitoso!');
     location.href = '../vistas/login.html';
-}
+}   
