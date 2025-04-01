@@ -11,7 +11,7 @@ function register() {
         return;
     }
 
-    if (contraseña !== confiContra) {
+    if (contraseña != confiContra) {
         alert('Las contraseñas no coinciden');
         return;
     }
