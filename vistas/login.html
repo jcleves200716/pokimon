@@ -6,19 +6,36 @@
     <title>Login POKIMON</title>
     <script src="../js/index.js"></script>
     <link rel="stylesheet" href="../css/fondo.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <center>
-        <h1>BIENVENIDO AL MUNDO POKIMON</h1>
-        <p>Bienvenido a mi primer juego en javascript</p>
-        <hr>
-        <input type="email" id="correo" placeholder="Corre" required>
-        <br>
-        <input type="password" id="contraseña" placeholder="Contraseña" required>
-        <br>
-        <button onclick="Loguear()">Iniciar sesión</button>
-        <br>
-        <a href="../vistas/Registro.html">Regístrate</a>
-    </center>
+    <div class="login-container">
+        <div class="pokeball-top"></div>
+        
+        <h1>BIENVENIDO ENTRENADOR</h1>
+        <p class="subtitle">¡Prepárate para tu aventura Pokimon!</p>
+        
+        <div class="login-box">
+            <div class="input-field">
+                <img src="../img/pokeball-ico.webp" alt="Pokeball" class="input-icon">
+                <input type="email" id="correo" placeholder="Correo Electrónico" required>
+            </div>
+            
+            <div class="input-field">
+                <img src="../img/pokeball-ico.webp" alt="Contraseña" class="input-icon">
+                <input type="password" id="contraseña" placeholder="Contraseña" required>
+            </div>
+            
+            <button onclick="Loguear()" class="login-button">
+                <span>Iniciar Sesión</span>
+                <img src="../img/pikachu-icon.webp" alt="Pikachu" class="button-icon">
+            </button>
+            
+            <a href="Registro.html" class="register-link">¿No tienes cuenta? <span>Regístrate aquí</span></a>
+        </div>
+        
+        <div class="pokeball-bottom"></div>
+    </div>
 </body>
 </html>

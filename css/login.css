@@ -1,0 +1,114 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.login-container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+h1 {
+    color: #FFCB05; /* Amarillo Pokimon */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #fff;
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+}
+
+/* Diseño del cuadro de login */
+.login-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 4px solid #FFCB05;
+}
+
+/* Campos de entrada */
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 2px solid #3D7DCA; /* Azul Pokimon */
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #FFCB05;
+    box-shadow: 0 0 5px rgba(255, 203, 5, 0.5);
+}
+
+/* Botón de login */
+.login-button {
+    background: #FF0000; /* Rojo Pokimon */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-button:hover {
+    background: #CC0000;
+    transform: translateY(-2px);
+}
+
+.button-icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+/* Enlace de registro */
+.register-link {
+    color: #3D7DCA;
+    text-decoration: none;
+    font-size: 0.6rem;
+    display: block;
+}
+
+.register-link span {
+    color: #FFCB05;
+    text-decoration: underline;
+}

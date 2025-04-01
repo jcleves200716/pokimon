@@ -1,0 +1,114 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.register-container {
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+h1 {
+    color: #FFCB05;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #fff;
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+}
+
+/* Diseño del cuadro de registro */
+.register-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 4px solid #3D7DCA; /* Azul Pokimon */
+}
+
+/* Campos de entrada */
+.input-field {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 2px solid #FFCB05; /* Amarillo Pokimon */
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #3D7DCA; /* Azul Pokimon */
+    box-shadow: 0 0 5px rgba(61, 125, 202, 0.5);
+}
+
+/* Botón de registro */
+.register-button {
+    background: #3D7DCA; /* Azul Pokimon */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0 10px;
+    transition: all 0.3s;
+}
+
+.register-button:hover {
+    background: #2A5F9E;
+    transform: translateY(-2px);
+}
+
+.button-icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+/* Enlace de login */
+.login-link {
+    color: #3D7DCA;
+    text-decoration: none;
+    font-size: 0.6rem;
+    margin-top: 15px;
+    display: block;
+}
+
+.login-link a {
+    color: #FF0000; /* Rojo Pokimon */
+    text-decoration: underline;
+}
