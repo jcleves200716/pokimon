@@ -9,23 +9,32 @@
     <script src="../js/inicio.js"></script>
 </head>
 <body>
-    <center>
-    <h1>BIENVENIDO AL MUNDO POKIMON</h1>
-        <p>Bienvenido a mi primer juego en javascript</p>
-        <hr>
-    </center>
+    <div class="container">
+        <header>
+            <h1>BIENVENIDO AL MUNDO POKIMON</h1>
+            <p class="subtitle">Bienvenido a mi primer juego en Javascript</p>
+        </header>
+
         <main>
-            <div class="info-box">
-                <div id="result" class="result">
-                    <h2>BIENVENIDO</h2>
+            <div class="profile-card">
+                <div class="profile-header">
+                    <h2>BIENVENIDO ENTRENADOR</h2>
+                    <div class="pokeball-decoration"></div>
+                </div>
+                
+                <div class="profile-info">
                     <p id="userName"></p>
                     <p id="userEmail"></p>
-                    <div id="welcomemessage"></div>
                 </div>
+                
+                <div id="welcomemessage" class="welcome-message"></div>
+                
+                <button class="battle-button" onclick="inicializarBatalla()">
+                    ¡COMENZAR AVENTURA!
+                    <img src="../img/pokeball-ico.webp" alt="Pokeball" class="button-icon">
+                </button>
             </div>
         </main>
-
-        
-    
+    </div>
 </body>
 </html>

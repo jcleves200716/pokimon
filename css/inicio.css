@@ -1,28 +1,146 @@
-.lilita-one-regular {
-    font-family: "Lilita One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-.info-box {
-    float: center;
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: #333;
+    background-color: #aa9d9d;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #FF0000; /* Rojo Pokimon */
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 0 #FFCB05; /* Amarillo Pokimon */
+}
+
+.subtitle {
+    color: #3D7DCA; /* Azul Pokimon */
+    font-size: 0.9rem;
+}
+
+/* Tarjeta de perfil */
+.profile-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 4px solid #FFCB05; /* Amarillo Pokimon */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-header {
     display: flex;
-    border: 2px solid hsl(209, 70%, 48%); /* Borde verde */
-    border-radius: 10px; /* Esquinas redondeadas */
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3D7DCA;
+    padding-bottom: 15px;
+}
+
+.profile-header h2 {
+    color: #3D7DCA; /* Azul Pokimon */
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.pokeball-decoration {
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/pokeball-ico.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.profile-info p {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Mensaje de bienvenida */
+.welcome-message {
+    background-color: #390abb;
+    border-left: 5px solid #e5dede;
     padding: 15px;
-    margin: 20px auto;
-    max-width: 600px;
-    background-color: #000a9a;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra */
+    margin-bottom: 25px;
+    border-radius: 0 8px 8px 0;
 }
 
-.info-box h3 {
-    color: #2E7D32; /* Verde oscuro */
+.welcome-message h3 {
+    color: #efebea;
     margin-top: 0;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
 }
 
-.info-box p {
-    margin: 8px 0;
-    font-size: 16px;
+.welcome-message ul {
+    padding-left: 20px;
+}
+
+.welcome-message li {
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+}
+
+/* Botón de acción */
+.battle-button {
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.battle-button:hover {
+    background-color: #CC0000;
+    transform: translateY(-3px);
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .profile-card {
+        padding: 15px;
+    }
+    
+    .profile-header h2 {
+        font-size: 1rem;
+    }
+    
+    .battle-button {
+        font-size: 0.7rem;
+        padding: 10px 15px;
+    }
 }
