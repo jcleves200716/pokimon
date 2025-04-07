@@ -11,6 +11,16 @@ function register() {
         return;
     }
 
+    if (usuario.length < 3) {
+            alert("El nombre debe tener al menos 4 caracteres.");
+            return false;
+        }
+    if (contraseña <=10) {
+        alert('La contraseña es muy corta')
+        return
+    
+   
+    }
     if (contraseña != confiContra) {
         alert('Las contraseñas no coinciden');
         return;
