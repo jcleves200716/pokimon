@@ -4,7 +4,6 @@ function register() {
     const confiContra = document.getElementById('confiContra').value;
     const usuario = document.getElementById('usuario').value;
     const edad = document.getElementById('edad').value;
-    const nomPokimon = document.getElementById('nomPokimon').value;
 
     if (!correo || !contraseña || !confiContra || !usuario || !edad || !nomPokimon) {
         alert('Por favor llene los campos');
@@ -29,8 +28,7 @@ function register() {
     localStorage.setItem('registroCorreo', correo);
     localStorage.setItem('registroContra', contraseña);
     localStorage.setItem('registroUsuario', usuario);
-    localStorage.setItem('registroEdad', edad);
-    localStorage.setItem('registroPokimon', nomPokimon);
+    localStorage.setItem('registroEdad', edad)
 
     alert('Registro exitoso!');
     location.href = '../vistas/login.html';

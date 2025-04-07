@@ -3,41 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo POKIMON</title>
-    <link rel="stylesheet" href="../css/fondo.css">
+    <title>Selección de Pokémons</title>
     <link rel="stylesheet" href="../css/inicio.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <script src="../js/inicio.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>BIENVENIDO AL MUNDO POKIMON</h1>
-            <p class="subtitle">Bienvenido a mi primer juego en Javascript</p>
-        </header>
-
-        <main>
-            <div class="profile-card">
-                <div class="profile-header">
-                    <h2>BIENVENIDO ENTRENADOR</h2>
-                    <div class="pokeball-decoration"></div>
-                </div>
-                
-                <div class="profile-info">
-                    <p id="userName"></p>
-                    <p id="userEmail"></p>
-                </div>
-                
-                <div id="welcomemessage" class="welcome-message"></div>
-                
-                <button class="battle-button" onclick='window.location.href="../vistas/Entrenadores.html"'>
-                    ¡COMENZAR AVENTURA!
-                    <img src="../img/pokeball-ico.webp" alt="Pokeball" class="button-icon">
-                </button>
-        
-                
+    <!-- Encabezado flotante -->
+    <header class="floating-header">
+        <div class="pokemon-display">
+            <h1 class="pokemon-name">ESCOGUE TU POKEMON</h1>
+            <div class="pokemon-types">
+                <span class="type-tag">Celular</span>
+                <span class="type-tag">Infantil</span>
             </div>
-        </main>
-    </div>
+            <div class="pokemon-category">Formules</div>
+        </div>
+    </header>
+
+    <!-- Área principal de Pokémons -->
+    <main class="pokemon-area">
+        <div class="pokemon-grid">
+            <!-- Pokémons como elementos flotantes -->
+            <button class="floating-pokemon" data-pokemon="pikachu">
+                <img src="../img/Pikachu.png" alt="Pikachu">
+                <span>Pikachu</span>
+            </button>
+            
+            <button class="floating-pokemon" data-pokemon="charizard">
+                <img src="../img/charizard.png" alt="Charizard">
+                <span>Charizard</span>
+            </button>
+            
+            <button class="floating-pokemon" data-pokemon="blastoise">
+                <img src="../img/bulbassaur.png" alt="Blastoise">
+                <span>Bulbassaur</span>
+            </button>
+            
+            <button class="floating-pokemon" data-pokemon="venusaur">
+                <img src="../img/Magikarp.webp" alt="Venusaur">
+                <span>Magikarp</span>
+            </button>
+            
+            <button class="floating-pokemon" data-pokemon="dragonite">
+                <img src="../img/cubone-shine.webp" alt="Dragonite">
+                <span>cubone-shine</span>
+            </button>
+            
+        </div>
+    </main>
+
+    <!-- Botones flotantes en la parte inferior -->
+    <nav class="floating-nav">
+        <button class="nav-btn combat-btn">Combate</button>
+        <button class="nav-btn view-btn">Ver Pokémons</button>
+    </nav>
+
+    <script src="./js/open-pokemon-app.js"></script>
 </body>
 </html>

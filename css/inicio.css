@@ -1,146 +1,224 @@
-/* Estilos generales */
-body {
+/* Estilos base abiertos */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Press Start 2P', cursive;
+
+    min-height: 100vh;
+    position: relative;
+    background-image: url('../img/foodo.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     color: #333;
-    background-color: #aa9d9d;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
+/* Encabezado flotante */
+.floating-header {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
     text-align: center;
-    margin-bottom: 30px;
-}
-
-h1 {
-    color: #FF0000; /* Rojo Pokimon */
-    font-size: 2rem;
-    margin-bottom: 10px;
-    text-shadow: 3px 3px 0 #FFCB05; /* Amarillo Pokimon */
-}
-
-.subtitle {
-    color: #3D7DCA; /* Azul Pokimon */
-    font-size: 0.9rem;
-}
-
-/* Tarjeta de perfil */
-.profile-card {
-    background-color: white;
-    border-radius: 15px;
-    padding: 25px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border: 4px solid #FFCB05; /* Amarillo Pokimon */
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.profile-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #3D7DCA;
-    padding-bottom: 15px;
-}
-
-.profile-header h2 {
-    color: #3D7DCA; /* Azul Pokimon */
-    margin: 0;
-    font-size: 1.3rem;
-}
-
-.pokeball-decoration {
-    width: 40px;
-    height: 40px;
-    background-image: url('../img/pokeball-ico.webp');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.profile-info {
-    margin-bottom: 20px;
-}
-
-.profile-info p {
-    margin: 10px 0;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* Mensaje de bienvenida */
-.welcome-message {
-    background-color: #390abb;
-    border-left: 5px solid #e5dede;
+    z-index: 100;
     padding: 15px;
-    margin-bottom: 25px;
-    border-radius: 0 8px 8px 0;
+    background: hwb(240 4% 93%);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.624);
+    backdrop-filter: blur(5px);
+    border-bottom: 3px solid #ffffff;
 }
 
-.welcome-message h3 {
-    color: #efebea;
-    margin-top: 0;
+
+
+.pokemon-display {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background: rgb(0, 0, 0);
 }
 
-.welcome-message ul {
-    padding-left: 20px;
+.pokemon-name {
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 0 rgb(0, 0, 0);
+    margin-bottom: 5px;
+}
+s
+.pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 5px;
 }
 
-.welcome-message li {
-    margin-bottom: 8px;
-    font-size: 0.8rem;
-}
-
-/* Botón de acción */
-.battle-button {
-    background-color: #FF0000;
+.type-tag {
+    background-color: #3D7DCA;
     color: white;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.6rem;
+}
+
+.pokemon-category {
+    font-size: 0.7rem;
+    color: #000000;
+}
+
+/* Área de Pokémons */
+.pokemon-area {
+    padding: 180px 20px 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Tarjetas de Pokémon flotantes */
+.floating-pokemon {
+    background: rgb(44, 42, 142);
     border: none;
+    text-decoration-color: #000000;
+    border-radius: 15px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 8px 20px rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.floating-pokemon::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #FF0000, #FFCB05, #3D7DCA);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.floating-pokemon:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.861);
+}
+
+.floating-pokemon:hover::before {
+    opacity: 0.3;
+}
+
+.floating-pokemon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.floating-pokemon:hover img {
+    transform: scale(1.1);
+}
+
+.floating-pokemon span {
+    font-size: 0.8rem;
+    color: #333;
+}
+
+/* Barra de navegación flotante */
+.floating-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-top: 3px solid #3D7DCA;
+    z-index: 100;
+}
+
+.nav-btn {
     padding: 12px 25px;
-    border-radius: 8px;
+    border: none;
+    border-radius: 50px;
     font-family: 'Press Start 2P', cursive;
     font-size: 0.8rem;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
     transition: all 0.3s;
+    min-width: 180px;
+    position: relative;
+    overflow: hidden;
 }
 
-.battle-button:hover {
-    background-color: #CC0000;
+.combat-btn {
+    background-color: #0011ff;
+    color: white;
+}
+
+.view-btn {
+    background-color: #3D7DCA;
+    color: white;
+}
+
+.nav-btn:hover {
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.button-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
+.nav-btn:active {
+    transform: translateY(0);
+}
+
+/* Efecto de selección */
+.floating-pokemon.selected {
+    border: 3px solid #FFCB05;
+    box-shadow: 0 0 0 3px rgba(255, 203, 5, 0.5);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 1.5rem;
+    .pokemon-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
     }
     
-    .profile-card {
-        padding: 15px;
+    .floating-pokemon img {
+        width: 80px;
+        height: 80px;
     }
     
-    .profile-header h2 {
-        font-size: 1rem;
+    .pokemon-name {
+        font-size: 1.4rem;
     }
     
-    .battle-button {
-        font-size: 0.7rem;
-        padding: 10px 15px;
+    .floating-nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .nav-btn {
+        width: 90%;
+        min-width: auto;
     }
 }
