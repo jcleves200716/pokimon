@@ -11,7 +11,7 @@ function Loguear() {
 
     if (correo === registroCorreo && contraseña === registroContra) {
         alert('Inicio de sesión exitoso');
-        window.location.href = '../vistas/inicio.html';
+        window.location.href = '../vistas/pokimons.html';
     } else {
         alert('Credenciales incorrectas');
     }
