@@ -10,7 +10,7 @@ body {
 
     min-height: 100vh;
     position: relative;
-    background-image: url('../img/foodo.jpg');
+    background-color: #000000;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -19,7 +19,7 @@ body {
 
 /* Encabezado flotante */
 .floating-header {
-    position: fixed;
+    position: fixed; 
     top: 0px;
     left: 0;
     right: 0;
@@ -27,9 +27,9 @@ body {
     z-index: 100;
     padding: 15px;
     background: hwb(240 4% 93%);
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.624);
+    box-shadow: 0 8px 20px rgb(96, 29, 220);
     backdrop-filter: blur(5px);
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 3px solid #000000;
     border-radius:  0px 0px 501px 501px;
 }
 
@@ -48,21 +48,7 @@ body {
     text-shadow: 2px 2px 0 rgb(0, 0, 0);
     margin-bottom: 5px;
 }
-s
-.pokemon-types {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 5px;
-}
 
-.type-tag {
-    background-color: #3D7DCA;
-    color: white;
-    padding: 3px 10px;
-    border-radius: 15px;
-    font-size: 0.6rem;
-}
 
 .pokemon-category {
     font-size: 0.7rem;
@@ -72,12 +58,15 @@ s
 /* Área de Pokémons */
 .pokemon-area {
     padding: 180px 20px 100px;
+    
     display: flex;
     justify-content: center;
+    margin-top: 5%;
 }
 
 .pokemon-grid {
     display: grid;
+    flex-grow: 1;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 25px;
     width: 100%;
@@ -86,9 +75,9 @@ s
 
 /* Tarjetas de Pokémon flotantes */
 .floating-pokemon {
-    background: rgb(44, 42, 142);
+    background: rgba(0, 0, 0, 0.794);
     border: none;
-    text-decoration-color: #000000;
+    text-decoration-color: #ffffff;
     border-radius: 15px;
     padding: 35px;
     display: flex;
@@ -96,8 +85,8 @@ s
     align-items: center;
     cursor: pointer;
     transition: all 0.3s;
-    box-shadow: 0 8px 20px rgb(0, 0, 0);
-    position: relative;
+    box-shadow: 0 8px 20px rgb(96, 29, 220);
+    position: relative; 
     overflow: hidden;
     z-index: 10;
 }
@@ -109,10 +98,10 @@ s
     left: -10px;
     right: -10px;
     bottom: -10px;
-    background: linear-gradient(45deg, #FF0000, #FFCB05, #3D7DCA);
+    background: linear-gradient(45deg, #9900ff, #000000, #0400ff);
     z-index: -1;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 1.0s;
 }
 
 .floating-pokemon:hover {
@@ -124,21 +113,22 @@ s
     opacity: 0.3;
 }
 
+/*usar para entrenador*/
 .floating-pokemon img {
     width: 100px;
-    height: 100px;
+    height: 300px; 
     object-fit: contain;
     margin-bottom: 10px;
-    transition: transform 0.3s;
+    transition: transform 1.0s;
 }
 
 .floating-pokemon:hover img {
-    transform: scale(1.1);
+    transform: scale(1.800);
 }
 
 .floating-pokemon span {
-    font-size: 0.8rem;
-    color: #333;
+    font-size: 1.0rem;
+    color: #ffffff; 
 }
 
 /* Barra de navegación flotante */
@@ -151,10 +141,10 @@ s
     justify-content: center;
     gap: 20px;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 -4px 15px rgba(96, 29, 2203);
     backdrop-filter: blur(5px);
-    border-top: 3px solid #3D7DCA;
+    border-top: 3px solid #7c3dca;
     z-index: 100;
 }
 
@@ -172,7 +162,7 @@ s
 }
 
 .combat-btn {
-    background-color: #0011ff;
+    background-color: #3b0073;
     color: white;
 }
 
@@ -223,3 +213,5 @@ s
         min-width: auto;
     }
 }
+
+
