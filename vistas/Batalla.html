@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combate Pokémon</title>
+    <link rel="stylesheet" href="../css/combat.css">
+    <script src="../js/Batalla.js" defer></script>
+</head>
+<body>
+    <h1>Combate Pokémon</h1>
+    
+    <!-- Contenedor para seleccionar entrenador y pokémon -->
+    <div class="seleccion">
+        <div>
+            <h2>Selecciona Entrenador</h2>
+            <select id="entrenador">
+                <option value="">--Elegir Entrenador--</option>
+                <option value="Ash Ketchum">Ash Ketchum</option>
+                <option value="Red">Red</option>
+                <option value="Ethan">Ethan</option>
+                <option value="Brendan">Brendan</option>
+            </select>
+        </div>
+
+        <div>
+            <h2>Selecciona Pokémon</h2>
+            <select id="pokemon">
+                <option value="">--Elegir Pokémon--</option>
+                <option value="Pikachu">Pikachu</option>
+                <option value="Charizard">Charizard</option>
+                <option value="Bulbassaur">Bulbassaur</option>S
+                <option value="Magikarp">Magikarp</option>
+                <option value="Cubone">cubone-shine</option>
+            </select>
+        </div>
+        
+        <button class="boton-combate" onclick="iniciarCombate()">Combate</button>
+    </div>
+    
+    <!-- Contenedor para mostrar el combate después de la selección -->
+    <div id="resultado" style="margin-top: 20px; font-size: 1.5rem; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);"></div>
+
+    <div class="contenedor-batalla">
+        <div class="pokemon-jugador">
+            <h2>Tu Pokémon</h2>
+            <p id="pokemon-jugador-nombre"></p>
+            <img id="pokemon-jugador-img" src="" alt="Tu Pokémon">
+        </div>
+
+        <div class="pokemon-rival">
+            <h2>Pokémon Rival</h2>
+            <p id="pokemon-rival-nombre"></p>
+            <img id="pokemon-rival-img" src="" alt="Pokémon Rival">
+        </div>
+    </div>
+</body>
+</html>
